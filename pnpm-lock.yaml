@@ -19,6 +19,9 @@ dependencies:
     version: 4.4.5(vue@3.5.8)
 
 devDependencies:
+  '@iconify/json':
+    specifier: ^2.2.251
+    version: 2.2.251
   '@rushstack/eslint-patch':
     specifier: ^1.8.0
     version: 1.10.4
@@ -31,6 +34,9 @@ devDependencies:
   '@types/node':
     specifier: ^20.14.5
     version: 20.16.5
+  '@unocss/preset-rem-to-px':
+    specifier: ^0.62.4
+    version: 0.62.4
   '@vitejs/plugin-vue':
     specifier: ^5.0.5
     version: 5.1.4(vite@5.4.7)(vue@3.5.8)
@@ -937,6 +943,13 @@ packages:
     deprecated: Use @eslint/object-schema instead
     dev: true
 
+  /@iconify/json@2.2.251:
+    resolution: {integrity: sha512-QltbOmMpDbjHG7F7shvkmnLu7UTEmf96Vuz+Mt7iWnr8V6bUTv9KSv5fuaZaYWL7zUN5FM4AZlY68/8JgQlRWg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+      pathe: 1.1.2
+    dev: true
+
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: true
@@ -1489,6 +1502,12 @@ packages:
       '@unocss/core': 0.62.4
       '@unocss/extractor-arbitrary-variants': 0.62.4
       '@unocss/rule-utils': 0.62.4
+    dev: true
+
+  /@unocss/preset-rem-to-px@0.62.4:
+    resolution: {integrity: sha512-+gnKXlgyN6AP53shVmL0+4khsQUkTdr9bnZ+qk0/5w632+QB5JQairTRxXFz3yi1+Z9PC4fSYAdKfRlu2zTdww==}
+    dependencies:
+      '@unocss/core': 0.62.4
     dev: true
 
   /@unocss/preset-tagify@0.62.4:
