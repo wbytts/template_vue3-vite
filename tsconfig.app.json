@@ -6,7 +6,7 @@
     "composite": true,
     // "moduleResolution": "Bundler",
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "types": ["element-plus/global.d.ts"],
+    "types": ["element-plus/global.d.ts", "vite-plugin-vue-layouts/client"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]

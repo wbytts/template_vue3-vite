@@ -10,19 +10,28 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import UnoCSS from 'unocss/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import Layouts from 'vite-plugin-vue-layouts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    // https://uvr.esm.is/
     VueRouter({
-      /* options */
+      // 扫描的拓展名支持 SFC 和 TSX
+      extensions: [".vue", ".tsx"],
+      // 不需要被扫描的页面(放页面级组件)
+      exclude: ["**/components/*"],
+      extendRoute(route) {
+
+      }
     }),
+    Layouts(),
     vue(),
     vueJsx(),
     vueDevTools(),
     AutoImport({
       imports: [
-        VueRouterAutoImports, 
+        VueRouterAutoImports,
       ],
       resolvers: [ElementPlusResolver()]
     }),
