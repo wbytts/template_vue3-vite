@@ -1,6 +1,4 @@
 <route lang="yaml">
-meta:
-  title: "啦啦啦"
 </route>
 
 <script>

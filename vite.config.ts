@@ -25,7 +25,14 @@ export default defineConfig({
 
       }
     }),
-    Layouts(),
+    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+    Layouts({
+      layoutsDirs: "./src/layouts", // 默认值 src/layouts
+      pagesDirs: "./src/pages", // 默认值 src/pages
+      defaultLayout: "default", // 默认 undefined
+      exclude: []
+
+    }),
     vue(),
     vueJsx(),
     vueDevTools(),
