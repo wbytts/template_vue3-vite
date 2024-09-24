@@ -17,6 +17,16 @@ export default defineConfig({
   plugins: [
     // https://uvr.esm.is/
     VueRouter({
+      routesFolder: [
+        {
+          src: "./src/pages",
+          path: "",
+        },
+        {
+          src: "./src/examples",
+          path: "examples/"
+        }
+      ],
       // 扫描的拓展名支持 SFC 和 TSX
       extensions: [".vue", ".tsx"],
       // 不需要被扫描的页面(放页面级组件)
