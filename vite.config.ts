@@ -1,3 +1,4 @@
+import VueMacros from 'unplugin-vue-macros/vite'
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
@@ -10,7 +11,8 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import UnoCSS from 'unocss/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
-import Layouts from 'vite-plugin-vue-layouts';
+import Layouts from 'vite-plugin-vue-layouts'
+import DefineOptions from 'unplugin-vue-define-options/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,43 +21,57 @@ export default defineConfig({
     VueRouter({
       routesFolder: [
         {
-          src: "./src/pages",
-          path: "",
+          src: './src/pages',
+          path: ''
         },
         {
-          src: "./src/examples",
-          path: "examples/"
+          src: './src/examples',
+          path: 'examples/'
         }
       ],
       // 扫描的拓展名支持 SFC 和 TSX
-      extensions: [".vue", ".tsx"],
+      extensions: ['.vue', '.tsx'],
       // 不需要被扫描的页面(放页面级组件)
-      exclude: ["**/components/*"],
-      extendRoute(route) {
-
-      }
-    }),
-    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+      exclude: ['**/components/*'],
+      extendRoute(route) {}
+    }), // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
     Layouts({
-      layoutsDirs: "./src/layouts", // 默认值 src/layouts
-      pagesDirs: "./src/pages", // 默认值 src/pages
-      defaultLayout: "default", // 默认 undefined
+      layoutsDirs: './src/layouts', // 默认值 src/layouts
+      pagesDirs: './src/pages', // 默认值 src/pages
+      defaultLayout: 'default', // 默认 undefined
       exclude: []
-
     }),
-    vue(),
-    vueJsx(),
-    vueDevTools(),
     AutoImport({
-      imports: [
-        VueRouterAutoImports,
-      ],
+      imports: [VueRouterAutoImports],
       resolvers: [ElementPlusResolver()]
     }),
     Components({
       resolvers: [ElementPlusResolver()]
     }),
-    UnoCSS()
+    UnoCSS(),
+    VueMacros({
+      shortEmits: true,
+      shortVmodel: { prefix: '$' },
+      reactivityTransform: true,
+      shortBind: true,
+      defineProp: { edition: 'kevinEdition' },
+      defineEmit: true,
+      setupComponent: true,
+      setupSFC: true,
+      exportExpose: true,
+      exportRender: true,
+      chainCall: true,
+      jsxDirective: true,
+      booleanProp: true,
+      plugins: {
+        vue: vue({
+          include: [/\.vue$/, /\.setup\.[cm]?[jt]sx?$/]
+        }),
+        vueJsx: vueJsx()
+      }
+    }),
+    DefineOptions(),
+    vueDevTools()
   ],
   resolve: {
     alias: {

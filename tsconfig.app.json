@@ -11,5 +11,34 @@
     "paths": {
       "@/*": ["./src/*"]
     }
+  },
+  "vueCompilerOptions": {
+    "target": 3, // 或 2.7 用于 Vue 2
+    "plugins": ["unplugin-vue-macros/volar", "@vue-macros/volar/define-props", "@vue-macros/volar"],
+    "vueMacros": {
+      "scriptSFC": true,
+    },
+  },
+  "vueMacros": {
+    "defineProp": true,
+    "defineEmit": true,
+    "defineModels": {
+      // 仅在 target 是 2.7 时有效
+      "unified": true
+    },
+    "shortVmodel": {
+      "prefix": "$"
+    },
+    "exportProps": true,
+    "exportExpose": true,
+    "exportRender": true,
+    "booleanProp": true,
+
+    // "kevinEdition" | "johnsonEdition" | false
+    "experimentalDefinePropProposal": "kevinEdition",
+    "scriptLang": {
+      "defaultLang": "ts"
+    },
+    "scriptSFC": true
   }
 }
