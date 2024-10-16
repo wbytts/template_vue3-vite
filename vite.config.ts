@@ -1,4 +1,3 @@
-import VueMacros from 'unplugin-vue-macros/vite'
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
@@ -12,6 +11,7 @@ import UnoCSS from 'unocss/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import Layouts from 'vite-plugin-vue-layouts'
+import VueMacros from 'unplugin-vue-macros/vite'
 import DefineOptions from 'unplugin-vue-define-options/vite'
 
 // https://vitejs.dev/config/
@@ -20,10 +20,12 @@ export default defineConfig({
     // https://uvr.esm.is/
     VueRouter({
       routesFolder: [
+        // 实际业务路由
         {
           src: './src/pages',
           path: ''
         },
+        // 示例页面相关路由
         {
           src: './src/examples',
           path: 'examples/'
@@ -34,17 +36,25 @@ export default defineConfig({
       // 不需要被扫描的页面(放页面级组件)
       exclude: ['**/components/*'],
       extendRoute(route) {}
-    }), // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+    }),
+    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
     Layouts({
       layoutsDirs: './src/layouts', // 默认值 src/layouts
       pagesDirs: './src/pages', // 默认值 src/pages
       defaultLayout: 'default', // 默认 undefined
+      // 需要排除的页面
       exclude: []
     }),
+    // 自动导入配置
     AutoImport({
-      imports: [VueRouterAutoImports],
+      imports: [
+        VueRouterAutoImports,
+        'vue', // Vue常用的组合式API
+        'pinia' // Pinia相关API
+      ],
       resolvers: [ElementPlusResolver()]
     }),
+    // 组件自动注册配置
     Components({
       resolvers: [ElementPlusResolver()]
     }),
