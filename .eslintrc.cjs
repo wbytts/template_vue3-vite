@@ -1,6 +1,10 @@
 /* eslint-env node */
 require('@rushstack/eslint-patch/modern-module-resolution')
 
+/*
+https://typescript-eslint.io/
+*/
+
 module.exports = {
   root: true,
   'extends': [
@@ -11,5 +15,10 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest'
+  },
+  rules: {
+    'vue/multi-word-component-names': 'off'
   }
 }
+
+

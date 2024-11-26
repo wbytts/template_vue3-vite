@@ -1,9 +1,6 @@
-<route lang="yaml">
-</route>
+<route lang="yaml"></route>
 
-<script>
-
-</script>
+<script></script>
 
 <template>
   <div>你好123</div>

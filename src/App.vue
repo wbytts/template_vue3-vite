@@ -8,7 +8,6 @@ const elementConfig = {
   size: 'small',
   zIndex: 3000
 } as ConfigProviderProps
-
 </script>
 
 <template>
