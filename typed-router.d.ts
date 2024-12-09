@@ -19,9 +19,25 @@ declare module 'vue-router/auto-routes' {
    */
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
+    '/admin/': RouteRecordInfo<'/admin/', '/admin', Record<never, never>, Record<never, never>>,
+    '/admin/blog/': RouteRecordInfo<'/admin/blog/', '/admin/blog', Record<never, never>, Record<never, never>>,
+    '/admin/blog/list': RouteRecordInfo<'/admin/blog/list', '/admin/blog/list', Record<never, never>, Record<never, never>>,
+    '/admin/dashboard/': RouteRecordInfo<'/admin/dashboard/', '/admin/dashboard', Record<never, never>, Record<never, never>>,
+    '/admin/dashboard/list': RouteRecordInfo<'/admin/dashboard/list', '/admin/dashboard/list', Record<never, never>, Record<never, never>>,
+    '/admin/note/': RouteRecordInfo<'/admin/note/', '/admin/note', Record<never, never>, Record<never, never>>,
+    '/admin/note/list': RouteRecordInfo<'/admin/note/list', '/admin/note/list', Record<never, never>, Record<never, never>>,
+    '/admin/project/': RouteRecordInfo<'/admin/project/', '/admin/project', Record<never, never>, Record<never, never>>,
+    '/admin/project/list': RouteRecordInfo<'/admin/project/list', '/admin/project/list', Record<never, never>, Record<never, never>>,
+    '/blog/': RouteRecordInfo<'/blog/', '/blog', Record<never, never>, Record<never, never>>,
+    '/blog/articles': RouteRecordInfo<'/blog/articles', '/blog/articles', Record<never, never>, Record<never, never>>,
+    '/blog/tags': RouteRecordInfo<'/blog/tags', '/blog/tags', Record<never, never>, Record<never, never>>,
+    '/collection/': RouteRecordInfo<'/collection/', '/collection', Record<never, never>, Record<never, never>>,
+    '/collection/list': RouteRecordInfo<'/collection/list', '/collection/list', Record<never, never>, Record<never, never>>,
     '/examples/flow/flow-01/': RouteRecordInfo<'/examples/flow/flow-01/', '/examples/flow/flow-01', Record<never, never>, Record<never, never>>,
     '/examples/flow/flow-02/': RouteRecordInfo<'/examples/flow/flow-02/', '/examples/flow/flow-02', Record<never, never>, Record<never, never>>,
+    '/examples/gsap/template': RouteRecordInfo<'/examples/gsap/template', '/examples/gsap/template', Record<never, never>, Record<never, never>>,
     '/examples/template': RouteRecordInfo<'/examples/template', '/examples/template', Record<never, never>, Record<never, never>>,
     '/examples/template-jsx': RouteRecordInfo<'/examples/template-jsx', '/examples/template-jsx', Record<never, never>, Record<never, never>>,
+    '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
   }
 }
