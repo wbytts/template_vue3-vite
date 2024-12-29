@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import { ElConfigProvider } from 'element-plus'
-import type { ConfigProviderProps } from 'element-plus'
+import { RouterView } from "vue-router";
+import { ElConfigProvider } from "element-plus";
+import type { ConfigProviderProps } from "element-plus";
 
 // Element Plus 全局配置对象
 const elementConfig = {
-  size: 'small',
-  zIndex: 3000
-} as ConfigProviderProps
+  size: "small",
+  zIndex: 3000,
+  namespace: "bye"
+} as ConfigProviderProps;
 </script>
 
 <template>
