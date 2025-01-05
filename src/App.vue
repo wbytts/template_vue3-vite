@@ -7,13 +7,13 @@ import type { ConfigProviderProps } from "element-plus";
 const elementConfig = {
   size: "small",
   zIndex: 3000,
-  namespace: "bye"
+  namespace: "by"
 } as ConfigProviderProps;
 </script>
 
 <template>
   <el-config-provider v-bind="elementConfig">
-    <RouterView />
+    <RouterView/>
   </el-config-provider>
 </template>
 
