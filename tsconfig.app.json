@@ -1,20 +1,27 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "./typed-router.d.ts"],
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "typed-router.d.ts", // 自动路由类型
+    "auto-imports.d.ts", // 自动导入
+    "components.d.ts" // 自动组件注册
+  ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
     // "moduleResolution": "Bundler",
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "types": [],
     "baseUrl": ".",
+    "jsx": "preserve",
     "paths": {
       "@/*": ["./src/*"]
     }
   },
   "vueCompilerOptions": {
     "target": 3, // 或 2.7 用于 Vue 2
-    "plugins": ["unplugin-vue-macros/volar", "@vue-macros/volar/define-props", "@vue-macros/volar"],
+    "plugins": ["unplugin-vue-macros/volar", "@vue-macros/volar/define-props", "@vue-macros/volar"]
   },
   "vueMacros": {
     "scriptSFC": true,
@@ -36,6 +43,6 @@
     "experimentalDefinePropProposal": "kevinEdition",
     "scriptLang": {
       "defaultLang": "ts"
-    },
+    }
   }
 }

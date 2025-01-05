@@ -1,4 +1,4 @@
-import { defineConfig } from 'unocss'
+import { defineConfig } from "unocss";
 import {
   presetUno,
   presetIcons,
@@ -10,10 +10,10 @@ import {
   transformerDirectives,
   transformerCompileClass,
   transformerAttributifyJsx
-} from 'unocss'
-import presetRemToPx from '@unocss/preset-rem-to-px'
-import presetLegacyCompat from '@unocss/preset-legacy-compat'
-import byPreset from './src/styles/by-preset'
+} from "unocss";
+import presetRemToPx from "@unocss/preset-rem-to-px";
+import presetLegacyCompat from "@unocss/preset-legacy-compat";
+import byPreset from "./src/styles/by-preset";
 
 /*
 pnpm add -D unocss @unocss/preset-legacy-compat @unocss/preset-rem-to-px  clsx
@@ -22,6 +22,7 @@ pnpm add @unocss/reset
 
 // https://unocss.dev/
 export default defineConfig({
+  hmrTopLevelAwait: false, // unocss 默认是 true，低版本浏览器是不支持的，启动后会报错
   presets: [
     // uno 默认预设
     // @unocss/preset-mini 基本预设，仅包含最基本的实用工具
@@ -33,16 +34,16 @@ export default defineConfig({
     // https://unocss.dev/presets/icons
     presetIcons({}),
     presetWebFonts({
-      provider: 'none' // none 仅将字体视为系统字体
+      provider: "none" // none 仅将字体视为系统字体
     }),
     presetTypography(),
     presetAttributify({
-      prefix: 'un-', // 前缀 (默认 un-)
+      prefix: "un-", // 前缀 (默认 un-)
       prefixedOnly: false // 是否只处理带前缀的 (默认false)
     }),
     // 标签化
     // 将css样式作为HTML的标签使用
-    presetTagify({ prefix: 'un-' }),
+    presetTagify({ prefix: "un-" }),
     // rem -> px 转换预设
     presetRemToPx(),
     // 传统兼容实用程序集
@@ -63,4 +64,4 @@ export default defineConfig({
     // 主要作用于在jsx文件内写 属性化预设的样式
     transformerAttributifyJsx()
   ]
-})
+});

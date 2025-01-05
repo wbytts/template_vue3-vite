@@ -1,4 +1,10 @@
-<route lang="yaml"></route>
+<route lang="json">
+{
+  "meta": {
+    "title": "首页"
+  }
+}
+</route>
 
 <script></script>
 

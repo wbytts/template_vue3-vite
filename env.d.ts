@@ -6,10 +6,8 @@
 /// <reference types="unplugin-vue-define-options/macros-global" />
 /// <reference types="@vue-macros/reactivity-transform/macros-global" />
 
-// @vue-macros/reactivity-transform/macros-global
-
-declare module '*.vue' {
-  import type { ComponentOptions } from 'vue'
-  const componentOptions: ComponentOptions
-  export default componentOptions
+declare module "*.vue" {
+  import type { ComponentOptions } from "vue";
+  const componentOptions: ComponentOptions;
+  export default componentOptions;
 }
