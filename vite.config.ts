@@ -22,7 +22,7 @@ import viteLegacy from "@vitejs/plugin-legacy";
 import { visualizer } from "rollup-plugin-visualizer";
 import TurboConsole from "unplugin-turbo-console/vite";
 import { viteMockServe } from "vite-plugin-mock";
-
+import StyilsVitePlugin from "@styils/vite-plugin";
 
 import pkg from "./package.json";
 
@@ -155,9 +155,8 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
           "esnext.string.match-all"
         ]
       }),
-      visualizer({
-        open: true
-      })
+      visualizer({ open: true }),
+      StyilsVitePlugin()
     ],
     resolve: {
       alias: {

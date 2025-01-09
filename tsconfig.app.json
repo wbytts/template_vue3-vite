@@ -17,7 +17,9 @@
     "jsx": "preserve",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+
+    "noImplicitAny": false, // 允许隐式 any
   },
   "vueCompilerOptions": {
     "target": 3, // 或 2.7 用于 Vue 2

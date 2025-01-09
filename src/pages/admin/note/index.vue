@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>笔记管理</div>
 </template>
 
 <script setup lang="ts"></script>

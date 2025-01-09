@@ -34,12 +34,14 @@ declare module 'vue-router/auto-routes' {
     '/collection/': RouteRecordInfo<'/collection/', '/collection', Record<never, never>, Record<never, never>>,
     '/collection/list': RouteRecordInfo<'/collection/list', '/collection/list', Record<never, never>, Record<never, never>>,
     '/examples/custom-ref/demo-01': RouteRecordInfo<'/examples/custom-ref/demo-01', '/examples/custom-ref/demo-01', Record<never, never>, Record<never, never>>,
+    '/examples/directives/el-select-load-more/': RouteRecordInfo<'/examples/directives/el-select-load-more/', '/examples/directives/el-select-load-more', Record<never, never>, Record<never, never>>,
     '/examples/element-plus/custom-column/': RouteRecordInfo<'/examples/element-plus/custom-column/', '/examples/element-plus/custom-column', Record<never, never>, Record<never, never>>,
     '/examples/element-plus/select/1': RouteRecordInfo<'/examples/element-plus/select/1', '/examples/element-plus/select/1', Record<never, never>, Record<never, never>>,
     '/examples/element-plus/slider/1': RouteRecordInfo<'/examples/element-plus/slider/1', '/examples/element-plus/slider/1', Record<never, never>, Record<never, never>>,
     '/examples/flow/flow-01/': RouteRecordInfo<'/examples/flow/flow-01/', '/examples/flow/flow-01', Record<never, never>, Record<never, never>>,
     '/examples/flow/flow-02/': RouteRecordInfo<'/examples/flow/flow-02/', '/examples/flow/flow-02', Record<never, never>, Record<never, never>>,
     '/examples/gsap/template': RouteRecordInfo<'/examples/gsap/template', '/examples/gsap/template', Record<never, never>, Record<never, never>>,
+    '/examples/styils/001-base/': RouteRecordInfo<'/examples/styils/001-base/', '/examples/styils/001-base', Record<never, never>, Record<never, never>>,
     '/examples/template': RouteRecordInfo<'/examples/template', '/examples/template', Record<never, never>, Record<never, never>>,
     '/examples/template-jsx': RouteRecordInfo<'/examples/template-jsx', '/examples/template-jsx', Record<never, never>, Record<never, never>>,
     '/examples/ts/props/': RouteRecordInfo<'/examples/ts/props/', '/examples/ts/props', Record<never, never>, Record<never, never>>,
@@ -48,5 +50,6 @@ declare module 'vue-router/auto-routes' {
     '/examples/ts/useTemplateRef/MyCom': RouteRecordInfo<'/examples/ts/useTemplateRef/MyCom', '/examples/ts/useTemplateRef/MyCom', Record<never, never>, Record<never, never>>,
     '/examples/turbo-console/test1': RouteRecordInfo<'/examples/turbo-console/test1', '/examples/turbo-console/test1', Record<never, never>, Record<never, never>>,
     '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
+    '/zczy/': RouteRecordInfo<'/zczy/', '/zczy', Record<never, never>, Record<never, never>>,
   }
 }

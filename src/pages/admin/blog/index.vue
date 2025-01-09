@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div>博客管理</div>
 </template>
 
 <script setup lang="ts"></script>

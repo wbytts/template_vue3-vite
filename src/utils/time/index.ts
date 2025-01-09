@@ -1,1 +1,1 @@
-import moment from "moment";
+export { dayjs } from "./dayjs";

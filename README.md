@@ -7,6 +7,8 @@
 [Pinia](https://pinia.vuejs.org/zh/)
 [VueUse](https://vueuse.org/)
 
+[VueCLI](https://cli.vuejs.org/zh/)
+
 # 构建工具
 
 ## Vite
@@ -26,6 +28,9 @@
 
 ## Element Plus
 [Element Plus](https://element-plus.org/zh-CN/)
+
+## Vex Table
+[Vex Table](https://vxetable.cn/v3)
 
 # 样式管理
 

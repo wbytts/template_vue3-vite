@@ -6,8 +6,10 @@
 }
 </route>
 
-<script></script>
-
 <template>
-  <div>你好123</div>
+  <div>这是首页</div>
 </template>
+
+<script setup lang="tsx"></script>
+
+
