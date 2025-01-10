@@ -6,10 +6,10 @@ interface ByPresetOptions {
 }
 
 export default definePreset((options?: ByPresetOptions): Preset => {
-  const prefix = options?.prefix ?? 'by-'
+  const prefix = options?.prefix ?? 'zy-'
 
   return {
-    name: 'by-preset',
+    name: 'zy-preset',
     rules: [],
     variants: []
   }
