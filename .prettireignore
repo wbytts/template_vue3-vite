@@ -1,0 +1,6 @@
+node_modules
+dist
+public
+auto-imports.d.ts
+components.d.ts
+typed-router.d.ts

@@ -8,8 +8,8 @@ const router = createRouter({
   routes: setupLayouts(routes)
 });
 
-export default router;
-
 export function setupRouter(app: App) {
   app.use(router);
 }
+
+export default router;

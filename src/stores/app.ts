@@ -1,5 +1,5 @@
-import { ref, computed } from 'vue'
-import { defineStore } from 'pinia'
+import { ref, computed } from "vue";
+import { defineStore } from "pinia";
 
 /*
 Setup Store
@@ -9,9 +9,9 @@ Setup Store
 */
 
 export const useAppStore = defineStore(
-  'app',
+  "app",
   () => {
-    return {}
+    return {};
   },
   { persist: true }
-)
+);
