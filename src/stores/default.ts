@@ -1,13 +1,14 @@
-import { ref, computed } from 'vue'
-import { defineStore } from 'pinia'
+import { ref, computed } from "vue";
+import { defineStore } from "pinia";
 
 // Option Store
-export const useDefaultStore = defineStore('default', {
+export const useDefaultStore = defineStore("default", {
+  // 持久化存储
   persist: true,
 
   // 相当于 data
   state: () => {
-    return {}
+    return {};
   },
 
   // 相当于 computed
@@ -15,4 +16,4 @@ export const useDefaultStore = defineStore('default', {
 
   // 相当于 methods
   actions: {}
-})
+});

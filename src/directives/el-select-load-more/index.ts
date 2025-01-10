@@ -28,7 +28,7 @@ const directive: ThisDirective = {
     }
 
     nextTick(() => {
-      const customClass = el.classList.values().find((x) => x.startsWith("load-more-cls-"));
+      const customClass = [...el.classList.values()].find((x) => x.startsWith("load-more-cls-"));
       const domClass = `${customClass || ""} .by-select-dropdown__wrap`;
       const element: any = el.querySelector(domClass);
       console.log("target dom", element);
@@ -45,7 +45,7 @@ const directive: ThisDirective = {
       element && (element.__vueCustomEvent__ = handleScroll);
       // 监听滚动事件
       element && element.addEventListener("scroll", handleScroll);
-    });
+    }).then(() => {});
   },
   beforeUnmount(el) {
     // 从元素上获取滚动事件并移除监听器

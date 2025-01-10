@@ -7,16 +7,11 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AdminFooter: typeof import('./src/components/admin/footer/index.vue')['default']
+    AdminSidebar: typeof import('./src/components/admin/sidebar/index.vue')['default']
+    AdminTopNav: typeof import('./src/components/admin/top-nav/index.vue')['default']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
-    ElInput: typeof import('element-plus/es')['ElInput']
-    ElOption: typeof import('element-plus/es')['ElOption']
-    ElSelect: typeof import('element-plus/es')['ElSelect']
-    ElTable: typeof import('element-plus/es')['ElTable']
-    ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
-    Footer: typeof import('./src/components/admin/footer/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Sidebar: typeof import('./src/components/admin/sidebar/index.vue')['default']
-    TopNav: typeof import('./src/components/admin/top-nav/index.vue')['default']
   }
 }

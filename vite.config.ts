@@ -29,15 +29,18 @@ import pkg from "./package.json";
 // https://vitejs.dev/config/
 // { mode: 'dev', command: 'serve', isSsrBuild: false, isPreview: false }
 export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
+  const routesFolder = [{ src: "./src/pages", path: "" }];
+
+  if (mode === "dev") {
+    routesFolder.push({ src: "./src/examples", path: "examples/" });
+  }
+
   return {
     plugins: [
       // https://uvr.esm.is/
       VueRouter({
         routeBlockLang: "json5",
-        routesFolder: [
-          { src: "./src/pages", path: "" }, // 实际业务路由
-          { src: "./src/examples", path: "examples/" } // 示例页面相关路由
-        ],
+        routesFolder,
         // 扫描的拓展名支持 SFC 和 TSX
         extensions: [".vue", ".tsx"],
         // 不需要被扫描的页面(放页面级组件)
@@ -78,6 +81,11 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
       Components({
         dts: "./components.d.ts",
         dirs: ["src/components"],
+        // 是否连同目录名称作为最终组件名
+        directoryAsNamespace: true,
+        // 如果文件名和组件前缀一致，则省略
+        collapseSamePrefixes: true,
+        globalNamespaces: [],
         exclude: [],
         excludeNames: [],
         resolvers: [
