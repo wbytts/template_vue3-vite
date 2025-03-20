@@ -13,7 +13,7 @@ import {
 } from "unocss";
 import presetRemToPx from "@unocss/preset-rem-to-px";
 import presetLegacyCompat from "@unocss/preset-legacy-compat";
-import zyPreset from "./src/styles/zy-preset";
+import byPreset from "./src/styles/by-preset";
 
 /*
 pnpm add -D unocss @unocss/preset-legacy-compat @unocss/preset-rem-to-px  clsx
@@ -52,7 +52,7 @@ export default defineConfig({
       commaStyleColorFunction: true // 将颜色函数【rgb() 和 hsl()】 从空格分隔转换为逗号分隔，以便更好地兼容旧版浏览器
     }),
     // 自定义 preset
-    zyPreset({})
+    byPreset({})
   ],
   transformers: [
     // 为 UnoCSS 启用 Windi CSS 的 变体组特性

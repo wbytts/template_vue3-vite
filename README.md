@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Vue
 [Vue3文档](https://cn.vuejs.org/)
 [Vue3迁移指南](https://v3-migration.vuejs.org/zh/)
@@ -92,10 +90,3 @@
 ## Cesium.js
 
 ## Web GIS
-
-# BibiBili 
-
-## UP
-[codewhy官方账号](https://space.bilibili.com/36139192)
-
->>>>>>> a1ea5d129770846d02d81257a32a510a09666b36

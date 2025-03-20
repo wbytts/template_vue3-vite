@@ -49,7 +49,8 @@ declare module 'vue-router/auto-routes' {
     '/examples/ts/useTemplateRef/': RouteRecordInfo<'/examples/ts/useTemplateRef/', '/examples/ts/useTemplateRef', Record<never, never>, Record<never, never>>,
     '/examples/ts/useTemplateRef/MyCom': RouteRecordInfo<'/examples/ts/useTemplateRef/MyCom', '/examples/ts/useTemplateRef/MyCom', Record<never, never>, Record<never, never>>,
     '/examples/turbo-console/test1': RouteRecordInfo<'/examples/turbo-console/test1', '/examples/turbo-console/test1', Record<never, never>, Record<never, never>>,
-    '/projects/': RouteRecordInfo<'/projects/', '/projects', Record<never, never>, Record<never, never>>,
-    '/zczy/': RouteRecordInfo<'/zczy/', '/zczy', Record<never, never>, Record<never, never>>,
+    '/interview/': RouteRecordInfo<'/interview/', '/interview', Record<never, never>, Record<never, never>>,
+    '/interview/question-list': RouteRecordInfo<'/interview/question-list', '/interview/question-list', Record<never, never>, Record<never, never>>,
+    '/login/': RouteRecordInfo<'/login/', '/login', Record<never, never>, Record<never, never>>,
   }
 }

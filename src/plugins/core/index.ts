@@ -1,3 +1,7 @@
-function install(app) {}
+import { type App } from 'vue'
 
-export default { install };
+function install(app: App): void {
+    // 在这里添加插件的安装逻辑
+}
+
+export default { install }

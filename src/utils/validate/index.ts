@@ -1,4 +1,4 @@
-import { phoneNumberRegex } from "./regex";
+import { regPhoneNumber, regPassword } from "./regex";
 
 /**
  * 验证输入的字符串是否为有效的电话号码格式
@@ -6,7 +6,7 @@ import { phoneNumberRegex } from "./regex";
  * @returns {Boolean}
  */
 export function validatePhoneNumber(str: string) {
-  return phoneNumberRegex.test(str);
+  return regPhoneNumber.test(str);
 }
 
 /**
@@ -15,6 +15,5 @@ export function validatePhoneNumber(str: string) {
  * @returns {Boolean}
  */
 export function validatePwd(str: string) {
-  const reg = /(?!.*\s)(?!^[\u4e00-\u9fa5]+$)(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^.{6,20}$/;
-  return reg.test(str);
+  return regPassword.test(str);
 }

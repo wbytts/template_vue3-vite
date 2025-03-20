@@ -11,12 +11,12 @@ export function mountApplication(props) {
 
   const app = createApp(App);
 
-  setupRouter(app);
-  setupPinia(app);
-  setupDirectives(app);
+  setupRouter(app); // 路由
+  setupPinia(app); // 状态管理
 
-  app.use(CorePlugin);
-  app.use(BywPlugin);
+  setupDirectives(app); // 自定义指令
+  app.use(CorePlugin); // 核心插件
+  app.use(BywPlugin); // 自定义插件
 
   app.mount(container ? container.querySelector("#app") : "#app");
 }

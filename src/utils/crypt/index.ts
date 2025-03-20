@@ -2,14 +2,14 @@
 // @ts-nocheck
 import CryptoJS from "crypto-js";
 
-const config = {
-  wms: { key: "1234123412ABCDEF", iv: "ABCDEF1234123412" },
-  params: { key: "zczsL2d9DfhLZO0s", iv: "412SFA342442saas" }
-};
-
-export function useCrypto(sysCode = "wms") {
-  const KEY = CryptoJS.enc.Utf8.parse(config[sysCode]?.key);
-  const IV = CryptoJS.enc.Utf8.parse(config[sysCode]?.iv);
+/**
+ * 加密
+ * @param {string} key 密钥
+ * @param {string} iv 偏移量
+ */
+export function useCrypto({ key, iv }) {
+  const KEY = CryptoJS.enc.Utf8.parse(key);
+  const IV = CryptoJS.enc.Utf8.parse(iv);
 
   // AES加密
   function encrypt(encStr) {
