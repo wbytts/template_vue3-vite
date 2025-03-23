@@ -44,6 +44,8 @@ declare module 'vue-router/auto-routes' {
     '/examples/styils/001-base/': RouteRecordInfo<'/examples/styils/001-base/', '/examples/styils/001-base', Record<never, never>, Record<never, never>>,
     '/examples/template': RouteRecordInfo<'/examples/template', '/examples/template', Record<never, never>, Record<never, never>>,
     '/examples/template-jsx': RouteRecordInfo<'/examples/template-jsx', '/examples/template-jsx', Record<never, never>, Record<never, never>>,
+    '/examples/test-slots/demo-001/': RouteRecordInfo<'/examples/test-slots/demo-001/', '/examples/test-slots/demo-001', Record<never, never>, Record<never, never>>,
+    '/examples/test-slots/demo-001/my-com': RouteRecordInfo<'/examples/test-slots/demo-001/my-com', '/examples/test-slots/demo-001/my-com', Record<never, never>, Record<never, never>>,
     '/examples/ts/props/': RouteRecordInfo<'/examples/ts/props/', '/examples/ts/props', Record<never, never>, Record<never, never>>,
     '/examples/ts/props/MyCom': RouteRecordInfo<'/examples/ts/props/MyCom', '/examples/ts/props/MyCom', Record<never, never>, Record<never, never>>,
     '/examples/ts/useTemplateRef/': RouteRecordInfo<'/examples/ts/useTemplateRef/', '/examples/ts/useTemplateRef', Record<never, never>, Record<never, never>>,

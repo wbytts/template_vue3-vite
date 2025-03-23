@@ -45,7 +45,7 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
         extensions: [".vue", ".tsx"],
         // 不需要被扫描的页面(放页面级组件)
         exclude: ["**/components/**/*"],
-        extendRoute(route: any) {}
+        extendRoute(route: any) { }
       }),
       // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
       Layouts({
