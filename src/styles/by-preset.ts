@@ -1,16 +1,16 @@
-import { definePreset } from 'unocss'
-import type { Preset } from 'unocss'
+import { definePreset } from "unocss";
+import type { Preset } from "unocss";
 
 interface ByPresetOptions {
-  prefix?: string
+  prefix?: string;
 }
 
 export default definePreset((options?: ByPresetOptions): Preset => {
-  const prefix = options?.prefix ?? 'by-'
+  const prefix = options?.prefix ?? "by-";
 
   return {
-    name: 'by-preset',
+    name: "by-preset",
     rules: [],
     variants: []
-  }
-})
+  };
+});

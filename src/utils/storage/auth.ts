@@ -1,7 +1,7 @@
 const TokenKey = "by-token";
 
-export function getToken() {
-  return localStorage.getItem(TokenKey);
+export function getToken(): string {
+  return localStorage.getItem(TokenKey) as string;
 }
 
 export function setToken(token: string) {

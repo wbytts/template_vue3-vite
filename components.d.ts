@@ -10,10 +10,7 @@ declare module 'vue' {
     AdminFooter: typeof import('./src/components/admin/footer/index.vue')['default']
     AdminSidebar: typeof import('./src/components/admin/sidebar/index.vue')['default']
     AdminTopNav: typeof import('./src/components/admin/top-nav/index.vue')['default']
-    ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
-    ElTable: typeof import('element-plus/es')['ElTable']
-    ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

@@ -1,8 +1,12 @@
 import axios from "axios";
-import type { InternalAxiosRequestConfig } from "axios";
+import { type InternalAxiosRequestConfig } from "axios";
+import { get, merge, split } from 'lodash-es';
+
+let loading = false; // 全局 loading 状态
+
 
 const service = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   timeout: 60 * 1000,
   headers: {
     ContentType: "application/json;charset=utf8"

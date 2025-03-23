@@ -142,7 +142,8 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
       viteLegacy({
         //需要兼容的目标列表，可以设置多个
         targets: ["chrome < 60", "edge < 15"],
-        additionalLegacyPolyfills: ["regenerator-runtime/runtime"], // 面向IE11时需要此插件
+        // 面向IE11时需要此插件
+        additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
         renderLegacyChunks: true,
         polyfills: [
           "es.symbol",

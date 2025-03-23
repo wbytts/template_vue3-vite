@@ -81,7 +81,7 @@ export async function getCache(cacheKey: string) {
 //! 表格状态管理
 
 //! ===================== 排序组件
-const TableColumnSettingContainerDiv = styled("div", {
+const DivTableColumnSettingContainer = styled("div", {
   position: "absolute",
   top: 0,
   right: 0,
@@ -180,7 +180,7 @@ function createSettingComponent() {
       });
 
       return () => (
-        <TableColumnSettingContainerDiv>
+        <DivTableColumnSettingContainer>
           <ElPopover ref={popover} placement='right' trigger='click' width={300}>
             {{
               default: () => (
@@ -234,7 +234,7 @@ function createSettingComponent() {
               reference: () => <EpIconSetting style='width: 20px; cursor: pointer;' />
             }}
           </ElPopover>
-        </TableColumnSettingContainerDiv>
+        </DivTableColumnSettingContainer>
       );
     }
   });
@@ -366,6 +366,6 @@ export default {
       }
     );
   },
-  updated(el: HTMLElement, binding: any, vnode: any) {},
-  unmounted(el: HTMLElement, binding: any, vnode: any) {}
+  updated(el: HTMLElement, binding: any, vnode: any) { },
+  unmounted(el: HTMLElement, binding: any, vnode: any) { }
 };

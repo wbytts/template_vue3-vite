@@ -1,5 +1,4 @@
-import { nextTick, type Directive } from "vue";
-import { v4 as uuidv4 } from "uuid";
+import { type Directive } from "vue";
 
 // 挂载元素的DOM类型
 type TheHostElement = HTMLElement;
@@ -13,11 +12,11 @@ type TheArg = "";
 type ThisDirective = Directive<TheHostElement, TheValue, TheModifiers, TheArg>;
 
 const directive: ThisDirective = {
-  created(el, binding, vnode) {},
+  created(el, binding, vnode) { },
   mounted(el, binding, vnode) {
     console.log(binding);
   },
-  beforeUnmount(el) {}
+  beforeUnmount(el) { }
 };
 
 export default directive;

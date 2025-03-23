@@ -90,9 +90,3 @@
 ## Cesium.js
 
 ## Web GIS
-
-# BibiBili 
-
-## UP
-[codewhy官方账号](https://space.bilibili.com/36139192)
-
