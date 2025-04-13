@@ -64,7 +64,7 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
           /\.vue\?vue/, // .vue
           /\.md$/ // .md
         ],
-        imports: [
+        imports: [ 
           VueRouterAutoImports,
           "vue", // Vue常用的组合式API
           "pinia", // Pinia相关API
