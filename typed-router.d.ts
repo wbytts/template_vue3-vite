@@ -33,6 +33,8 @@ declare module 'vue-router/auto-routes' {
     '/blog/tags': RouteRecordInfo<'/blog/tags', '/blog/tags', Record<never, never>, Record<never, never>>,
     '/collection/': RouteRecordInfo<'/collection/', '/collection', Record<never, never>, Record<never, never>>,
     '/collection/list': RouteRecordInfo<'/collection/list', '/collection/list', Record<never, never>, Record<never, never>>,
+<<<<<<< HEAD
+=======
     '/examples/custom-ref/demo-01': RouteRecordInfo<'/examples/custom-ref/demo-01', '/examples/custom-ref/demo-01', Record<never, never>, Record<never, never>>,
     '/examples/directives/el-select-load-more/': RouteRecordInfo<'/examples/directives/el-select-load-more/', '/examples/directives/el-select-load-more', Record<never, never>, Record<never, never>>,
     '/examples/element-plus/custom-column/': RouteRecordInfo<'/examples/element-plus/custom-column/', '/examples/element-plus/custom-column', Record<never, never>, Record<never, never>>,
@@ -51,6 +53,7 @@ declare module 'vue-router/auto-routes' {
     '/examples/ts/useTemplateRef/': RouteRecordInfo<'/examples/ts/useTemplateRef/', '/examples/ts/useTemplateRef', Record<never, never>, Record<never, never>>,
     '/examples/ts/useTemplateRef/MyCom': RouteRecordInfo<'/examples/ts/useTemplateRef/MyCom', '/examples/ts/useTemplateRef/MyCom', Record<never, never>, Record<never, never>>,
     '/examples/turbo-console/test1': RouteRecordInfo<'/examples/turbo-console/test1', '/examples/turbo-console/test1', Record<never, never>, Record<never, never>>,
+>>>>>>> de35afc48eb0449021d2f704dca96b199c7d21ba
     '/interview/': RouteRecordInfo<'/interview/', '/interview', Record<never, never>, Record<never, never>>,
     '/interview/question-list': RouteRecordInfo<'/interview/question-list', '/interview/question-list', Record<never, never>, Record<never, never>>,
     '/login/': RouteRecordInfo<'/login/', '/login', Record<never, never>, Record<never, never>>,

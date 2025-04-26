@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, reactive } from "vue";
 import { useRouter } from "vue-router";
-import type { FormInstance, FormRules } from "element-plus";
+import MatrixRain from "../../components/ui/MatrixRain.vue";
 
 const router = useRouter();
 
@@ -42,55 +42,148 @@ const handleLogin = async (): Promise<void> => {
 
 <template>
   <div class="login-container">
+    <MatrixRain color="#00ff41" :speed="50" :font-size="14" />
     <div class="login-box">
-      <h2>系统登录</h2>
-      <el-form ref="loginFormRef" :model="loginForm" :rules="rules" label-width="0">
-        <el-form-item prop="username">
-          <el-input v-model="loginForm.username" placeholder="请输入用户名" prefix-icon="User" />
-        </el-form-item>
+      <div class="terminal-header">
+        <div class="terminal-buttons">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="terminal-title">系统登录</div>
+      </div>
+      <div class="terminal-content">
+        <div class="terminal-prompt">$ 请输入凭证</div>
+        <el-form ref="loginFormRef" :model="loginForm" :rules="rules" label-width="0">
+          <el-form-item prop="username">
+            <el-input v-model="loginForm.username" placeholder="用户名" prefix-icon="User" class="matrix-input" />
+          </el-form-item>
 
-        <el-form-item prop="password">
-          <el-input
-            v-model="loginForm.password"
-            type="password"
-            placeholder="请输入密码"
-            prefix-icon="Lock"
-            @keyup.enter="handleLogin"
-          />
-        </el-form-item>
+          <el-form-item prop="password">
+            <el-input
+              v-model="loginForm.password"
+              type="password"
+              placeholder="密码"
+              prefix-icon="Lock"
+              @keyup.enter="handleLogin"
+              class="matrix-input"
+            />
+          </el-form-item>
 
-        <el-form-item>
-          <el-button type="primary" class="login-button" @click="handleLogin"> 登录 </el-button>
-        </el-form-item>
-      </el-form>
+          <el-form-item>
+            <el-button type="primary" class="login-button" @click="handleLogin">接入系统</el-button>
+          </el-form-item>
+        </el-form>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap");
+
 .login-container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: #000;
+  font-family: "Fira Code", monospace;
+  position: relative;
 }
 
 .login-box {
-  width: 400px;
-  padding: 40px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  width: 450px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  border: 1px solid #00ff41;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.5);
+  z-index: 10;
+  overflow: hidden;
 }
 
-.login-box h2 {
+.terminal-header {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 10px 15px;
+  border-bottom: 1px solid #00ff41;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-buttons span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff5f56;
+}
+
+.terminal-buttons span:nth-child(2) {
+  background-color: #ffbd2e;
+}
+
+.terminal-buttons span:nth-child(3) {
+  background-color: #27c93f;
+}
+
+.terminal-title {
+  flex-grow: 1;
   text-align: center;
-  margin-bottom: 30px;
-  color: #333;
+  color: #00ff41;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.terminal-content {
+  padding: 30px;
+}
+
+.terminal-prompt {
+  color: #00ff41;
+  margin-bottom: 20px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.matrix-input :deep(.el-input__wrapper) {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  border: 1px solid #00ff41 !important;
+  box-shadow: none !important;
+}
+
+.matrix-input :deep(.el-input__wrapper.is-focus) {
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.5) !important;
+}
+
+.matrix-input :deep(.el-input__inner) {
+  color: #00ff41 !important;
+  font-family: "Fira Code", monospace;
+}
+
+.matrix-input :deep(.el-input__prefix-inner i) {
+  color: #00ff41 !important;
 }
 
 .login-button {
   width: 100%;
+  background-color: transparent !important;
+  border: 1px solid #00ff41 !important;
+  color: #00ff41 !important;
+  font-family: "Fira Code", monospace;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: rgba(0, 255, 65, 0.2) !important;
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+}
+
+:deep(.el-form-item__error) {
+  color: #ff5f56;
 }
 </style>

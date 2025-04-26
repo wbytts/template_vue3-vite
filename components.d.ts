@@ -13,5 +13,6 @@ declare module 'vue' {
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UiMatrixRain: typeof import('./src/components/ui/MatrixRain.vue')['default']
   }
 }
