@@ -1,29 +1,36 @@
-<script setup>
+<script setup lang="ts">
 import { ref, reactive } from "vue";
 import { useRouter } from "vue-router";
+import type { FormInstance, FormRules } from "element-plus";
 
 const router = useRouter();
 
+// 定义表单数据接口
+interface LoginFormInterface {
+  username: string;
+  password: string;
+}
+
 // 表单数据
-const loginForm = reactive({
+const loginForm = reactive<LoginFormInterface>({
   username: "",
   password: ""
 });
 
 // 表单规则
-const rules = {
+const rules = reactive<FormRules>({
   username: [{ required: true, message: "请输入用户名", trigger: "blur" }],
   password: [{ required: true, message: "请输入密码", trigger: "blur" }]
-};
+});
 
 // 表单引用
-const loginFormRef = ref(null);
+const loginFormRef = ref<FormInstance | null>(null);
 
 // 登录方法
-const handleLogin = async () => {
+const handleLogin = async (): Promise<void> => {
   if (!loginFormRef.value) return;
 
-  await loginFormRef.value.validate((valid) => {
+  await loginFormRef.value.validate((valid: boolean) => {
     if (valid) {
       // TODO: 这里添加实际的登录逻辑
       console.log("登录表单提交:", loginForm);
