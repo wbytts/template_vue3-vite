@@ -18,5 +18,4 @@ import MyCom from './my-com.vue'
 </script>
 
 <style scoped>
-
 </style>

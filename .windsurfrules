@@ -1,0 +1,2 @@
+1. 项目的前端技术栈为 Vue3 + Vite + Element Plus + Pinia + UnoCSS
+2. 项目配置了 unplugin-auto-import

@@ -1,16 +1,16 @@
-import type { SetupContext } from "vue";
-import { defineComponent } from "vue";
+import { defineComponent, type SetupContext } from "vue";
 
-interface Props {}
+interface Props { }
 
 interface Events {
   change: [params: any];
 }
 
-interface Slots {}
+interface Slots { }
 
 export default defineComponent({
-  steup(props: Props, { attrs, slots, emit, expose }: SetupContext<Events, Slots>) {
+  setup(props: Props, { attrs, slots, emit, expose }: SetupContext<Events, Slots>) {
+    console.log("template-jsx.tsx")
     return () => (
       <div>
         <div>JSX/TSX</div>

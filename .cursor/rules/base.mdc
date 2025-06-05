@@ -1,16 +1,9 @@
 ---
-description: ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+description: 
 globs: 
+alwaysApply: true
 ---
-
-# 全局注意事项
-
-1. 尽量不用三元表达式，除非就一行特别简单
-
-
-
-
-
-
+- 始终使用中文进行问答
+- 尽量不用三元表达式，除非就一行特别简单
 
 
