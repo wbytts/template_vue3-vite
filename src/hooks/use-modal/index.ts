@@ -1,9 +1,9 @@
-import { ref, type C } from "vue";
+import { ref, type Component } from "vue";
 
 /**
  * 封装弹窗
  */
-export function useModal(component) {
+export function useModal(component: Component) {
   const visible = ref(false);
 
   // 打开弹窗
